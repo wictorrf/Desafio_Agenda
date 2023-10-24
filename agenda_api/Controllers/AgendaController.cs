@@ -52,6 +52,11 @@ namespace Agenda_proj.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<AgendaModel>> UpdateContact([FromBody] AgendaModel agendaModel, int id)
         {
+            var validationResult = _validator.Validate(agendaModel);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors.ToAgendaValidationFailure());
+            }
             AgendaModel userUpdated = await _agendaRepository.Update(agendaModel, id);
             return userUpdated;
         }

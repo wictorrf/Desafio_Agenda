@@ -44,6 +44,8 @@
 import axios from "axios";
 import { reactive } from "vue";
 import { useRouter } from "vue-router";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 let newContact = reactive({
   name: "",
@@ -54,8 +56,20 @@ let newContact = reactive({
 const router = useRouter();
 
 const addContact = () => {
-  axios.post("https://localhost:7290/api/Agenda", newContact).then(() => {
-    router.push("/");
-  });
+  axios
+    .post("https://localhost:7290/api/Agenda", newContact)
+    .then(() => {
+      router.push("/");
+    })
+    .catch((error) => {
+      const errorResponses = error.response.data;
+      if (error.response && Array.isArray(errorResponses)) {
+        errorResponses.forEach((element) => {
+          toast.error(element.errorMessage, {
+            autoClose: 4000,
+          });
+        });
+      }
+    });
 };
 </script>

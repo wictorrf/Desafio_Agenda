@@ -10,9 +10,9 @@ namespace Agenda_proj.Models.Validations
     {
         public AgendaValidator()
         {
-            RuleFor(a => a.Name).NotEmpty();
-            RuleFor(a => a.Email).EmailAddress();
-            RuleFor(a => a.Cellphone).NotEmpty();
+            RuleFor(a => a.Name).NotEmpty().NotNull();
+            RuleFor(a => a.Email).NotEmpty().EmailAddress();
+            RuleFor(a => a.Cellphone).NotEmpty().Length(11);
         }
     }
 }
