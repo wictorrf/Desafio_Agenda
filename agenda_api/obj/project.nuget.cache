@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EKWhw55L3tepcHQ72KB4eQjVmquITbG5uxHdQVAc0CedWD1VJs1IWQcWRgguSasZmBr+c1q8SAxGLYiCaJzZRw==",
+  "dgSpecHash": "RpimR3+6D9xbapK4qjGU9dEhYPwpajNEtcQozjzyJ3ZBsnSjZQoSFH/A6Vb1+IytPWoZrWgoQ4NSu+wE6bwIhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_proj\\Agenda_proj.csproj",
+  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_Desafio\\agenda_api\\Agenda_proj.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wicto\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\wicto\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

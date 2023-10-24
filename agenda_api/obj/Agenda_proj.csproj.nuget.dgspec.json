@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_proj\\Agenda_proj.csproj": {}
+    "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_Desafio\\agenda_api\\Agenda_proj.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_proj\\Agenda_proj.csproj": {
+    "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_Desafio\\agenda_api\\Agenda_proj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_proj\\Agenda_proj.csproj",
+        "projectUniqueName": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_Desafio\\agenda_api\\Agenda_proj.csproj",
         "projectName": "Agenda_proj",
-        "projectPath": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_proj\\Agenda_proj.csproj",
+        "projectPath": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_Desafio\\agenda_api\\Agenda_proj.csproj",
         "packagesPath": "C:\\Users\\wicto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_proj\\obj\\",
+        "outputPath": "C:\\Users\\wicto\\OneDrive\\Área de Trabalho\\CURSO_.NET\\Agenda_Desafio\\agenda_api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wicto\\AppData\\Roaming\\NuGet\\NuGet.Config"
