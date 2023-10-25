@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using agenda_api.Models;
 using Agenda_proj.Models;
 using Agenda_proj.Models.Validations;
 using Agenda_proj.Models.Validations.Error;
 using Agenda_proj.Repositories.Interfaces;
+using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,21 +19,24 @@ namespace Agenda_proj.Controllers
     {
         private readonly IAgendaRepository _agendaRepository;
         private readonly IValidator<AgendaModel> _validator;
-        public AgendaController(IAgendaRepository agendaRepository, IValidator<AgendaModel> validator)
+        private readonly IMapper _mapper;
+        public AgendaController(IAgendaRepository agendaRepository, IValidator<AgendaModel> validator, IMapper mapper)
         {
             _agendaRepository = agendaRepository;
             _validator = validator;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public async Task<ActionResult<AgendaModel>> RegisterContact([FromBody] AgendaModel agendaModel)
+        public async Task<ActionResult<AgendaModel>> RegisterContact([FromBody] AgendaInputModel model)
         {
-            var validationResult = _validator.Validate(agendaModel);
+            var agenda = _mapper.Map<AgendaModel>(model);
+            var validationResult = _validator.Validate(agenda);
             if (!validationResult.IsValid)
             {
                 return BadRequest(validationResult.Errors.ToAgendaValidationFailure());
             }
-            AgendaModel createuser = await _agendaRepository.Create(agendaModel);
+            AgendaModel createuser = await _agendaRepository.Create(agenda);
             return Ok(createuser);
         }
 

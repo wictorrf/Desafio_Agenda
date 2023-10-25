@@ -1,3 +1,4 @@
+using agenda_api.Profiles;
 using Agenda_proj.Data;
 using Agenda_proj.Models;
 using Agenda_proj.Models.Validations;
@@ -9,8 +10,10 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddCors(options => {
-    options.AddPolicy("Cors", p => {
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Cors", p =>
+    {
         p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
     });
 });
@@ -24,6 +27,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(AgendaProfile));
 
 var app = builder.Build();
 
