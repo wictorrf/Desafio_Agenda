@@ -10,7 +10,7 @@ No frontend com VueJs Utilizei o Bootstrap framework para me dar praticidade no 
 mais agradavel.
 
 ## OBS:
-Eu criei o Dockerfile na minha api, mas eu não pude gerar a imagem e rodar por que minha máquina só tem 4 gb ram apenas, e com os programas abertos não foi capaz de gerar as imagens. Mas eu criei a configuração no arquivo e dps de fazer a build da image, eu iria rodar _docker run -d -p 72:90 my-dotnet-app:1.0_ para inicial a imagem na porta determinada.
+Eu criei o Dockerfile na minha api, mas eu não pude gerar a imagem e rodar por que minha máquina só tem 4 gb ram apenas, e com os programas abertos não foi capaz de gerar as imagens. Mas eu criei a configuração no arquivo e dps de fazer a build da image, eu iria rodar _docker run -d -p 72:90 my-dotnet-api:1.0_ para inicial a imagem na porta determinada.
 
 
 
